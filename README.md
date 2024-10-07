@@ -5,7 +5,7 @@
 ### Clone Project
 
 ```
-git clone https://github.com/csxman/mystock.git
+git clone https://github.com/csxman/minifarm-backend-node.git
 ```
 
 ### Install Project
