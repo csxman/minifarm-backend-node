@@ -38,7 +38,7 @@ npm run lint
 
 ### 1.Import/Restore Database File in MySQL Server
 
-Import/Resotre database file in project name 'db.sql' To MySQL Server in Porduction Server
+Import/Resotre database file in project name 'taokaem_minifarm_db_2024_08_21.sql' To MySQL Server in Porduction Server
 
 ### 2.Config Database Connection
 
