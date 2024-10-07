@@ -1,0 +1,89 @@
+@base_url = http://localhost
+@port = 9295
+
+@url = {{base_url}}:{{port}} 
+
+@logistic_api = {{url}}/logistic-sendcane
+@adjust_api = {{url}}/activity-adjust
+@canecut_api = {{url}}/activity-canecut
+@drone_api = {{url}}/activity-drone
+@leaves_api = {{url}}/activity-leaves
+
+
+
+
+
+POST {{logistic_api}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "plot_key": "32432424",
+    "harvest_carcut_name": "ch10",
+    "driver_user_id": 123,
+    "harvest_truck_license_plate": "ลย00988",
+    "truck_status": "abc",
+    "truck_tun_driver": 123.99,
+    "truck_tun_fac": 123.99,
+    "date_start": "2022-11-24 12:24:02",
+    "date_fac": "2022-11-24 13:24:02",
+    "date_end": "2022-11-24 14:24:02",
+    "bin_code": "mpl009/99",
+    "bin_image": "sdlfjasdlkfj/asdfadf/adfadfasdfadfadfa",
+    "driver_desc": "test send data",
+    "driver_image": "sdlfjasdlkfj/asdfadf/adfadfasdfadfadfa",
+    "admin_status": "ok",
+    "admin_date": "2022-11-24 17:24:02",
+    "admin_desc": "เรียบร้อย"
+
+}
+
+POST {{logistic_api}}/10 HTTP/1.1
+Content-Type: application/json
+
+{
+    "bin_code": "ch10",
+    "truck_tun_fac": 123,
+    "bin_image": "ลย00988",
+    "date_end": "abc"
+}
+
+PUT {{logistic_api}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "plot_key": "32432424",
+    "harvest_carcut_name": "ch10",
+    "driver_user_id": 123,
+    "harvest_truck_license_plate": "ลย00988",
+    "truck_status": "abc",
+    "truck_tun_driver": 123.99,
+    "date_start": "2022-11-24 12:24:02",
+    "driver_desc": "test send data",
+    "driver_image": "sdlfjasdlkfj/asdfadf/adfadfasdfadfadfa"
+}
+
+###
+GET {{logistic_api}}/get HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{logistic_api}}/getdetail HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{logistic_api}}/getdetail/9 HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{adjust_api}}/getdata HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{canecut_api}}/getdata HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{drone_api}}/getdata HTTP/1.1
+Content-Type: application/json
+
+
